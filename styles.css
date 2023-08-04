@@ -1,0 +1,117 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.grouped-div {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+  flex-basis: calc(30% - 20px);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  animation: fadeInUp 0.8s ease;
+}
+
+.grouped-div table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grouped-div td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.grouped-div tr:last-child td {
+  border-bottom: none;
+}
+/* Add this class for the table cells containing numbers */
+.grouped-div td.number-cell {
+text-align: right;
+}
+
+.group-number {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  background-color: #4285F4;
+  color: #ffffff;
+  padding: 8px;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#shuffleDiv {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#shuffleButton {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#shuffleButton:hover {
+  background-color: #45a049;
+}
+
+#downloadButton {
+  background-color: #2196F3;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#downloadButton:hover {
+  background-color: #007bff;
+}
+
+
+@media screen and (max-width: 768px) {
+  #shuffleDiv {
+    position: relative;
+    margin-top: 20px;
+  }
+}
+
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
